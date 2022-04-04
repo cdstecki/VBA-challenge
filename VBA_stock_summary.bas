@@ -10,7 +10,7 @@ Sub stock_summary()
         yearly_change = 0
         Dim percent_change As Double
         percent_change = 0
-        Dim total_volume_stock As Double
+        Dim total_stock_volume As Double
         total_stock_volume = 0
         Dim open_price As Double
         open_price = 0
@@ -52,6 +52,7 @@ Sub stock_summary()
         'Loop through all stocks
         For i = 2 To last_row
         
+            'Reset percentage change for each loop run
             percent_change = 0
         
             If ws.Cells(i + 1, 1).Value <> ws.Cells(i, 1).Value Then
